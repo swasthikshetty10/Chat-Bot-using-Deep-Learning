@@ -11,6 +11,7 @@ with open('intents.json') as file:
     data = json.load(file)
     
 training_sentences = []
+
 training_labels = []
 labels = []
 responses = []
