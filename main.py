@@ -30,8 +30,8 @@ def chat():
     max_len = 20
     
     while True:
-        print(Fore.LIGHTBLUE_EX + "User: " + Style.RESET_ALL, end="")
-        inp = input()
+        #print(Fore.LIGHTBLUE_EX + "User: " + Style.RESET_ALL, end="")
+        inp = input(Fore.LIGHTBLUE_EX + "User: " + Style.RESET_ALL)
         if inp.lower() == "quit":
             break
 

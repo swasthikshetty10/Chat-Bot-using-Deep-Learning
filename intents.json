@@ -1,5 +1,24 @@
 {"intents": [
-
+    {"tag": "greeting",
+     "patterns": ["Hi", "How are you", "Is anyone there?","hey" ,"Hello", "Good day", "Whats up"],
+     "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
+     "context_set": ""
+    },
+    {"tag": "goodbye",
+     "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
+     "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+     "context_set": ""
+    },
+    {"tag": "age",
+     "patterns": ["how old", "how old is EPAX", "what is your age", "how old are you", "age?"],
+     "responses": ["I am 18 years old!", "18 years young!"],
+     "context_set": ""
+    },
+    {"tag": "name",
+     "patterns": ["what is your name", "what should I call you", "whats your name?"],
+     "responses": ["You can call me EPAX.", "I'm EPAX!", "I'm EPAX aka swasthik."],
+     "context_set": ""
+    },
     {"tag": "discord",
      "patterns": ["discord server", "discord link", "how can i join discord?", "how can i talk to you?"],
      "responses": ["join my discord server https://discord.gg/aUppFDZ", "https://discord.gg/aUppFDZ hey i will be active here you can talk to me"],
@@ -9,39 +28,6 @@
      "patterns": ["what are you doing?", "what about you", "who are you"],
      "responses": ["i am a student exploring the world of computer science!"],
      "context_set": ""
-    },
-
-    {"tag":"greeting",
-     "patterns":["Hello","How are you","Is anyone there","Hello","Good day", "What's up"],
-     "responses":["Hello!","Good to see you again","Hi there, how can I help you?"],	
-     "context_set":""	
-    },	
-    {"tag":"goodbye",
-     "patterns":["cya","see you later","Goodbye","I am leaving","Have a good day", "bye"],
-     "responses":["Sad to see you go :(","Talk to you later","Goodbye", "see you"],	
-     "context_set":""	
-    },	
-    			
-    {"tag":"age",
-     "patterns":["wattafine","How old","How old is Reda","How old are you","age", "aging"],
-     "responses":["I am old enough not to talk to you about it!","I am an immortal"],	
-     "context_set":""
-    },	
-    {"tag":"name",
-     "patterns":["What is your name","How are you","Is anyone there","Hello","Good day", "What's up"],
-     "responses":["You can call me EPAX's Bot","I'm the handsome bot","I am cool bot"],	
-     "context_set":""
-    },	
-    {"tag":"help",
-     "patterns":["I need help","I am stuck","can't work","Need help so quickly","could you help me fix this issue", "I am having trouble"],
-     "responses":["Meet me at the IT cage whenever your get a chance!","Please submit a ticket about your issue via river","Calm down, we're here to help", "Trust me, I am an engineer"],	
-     "context_set":""	
-    },	
-    {"tag":"break",
-     "patterns":["I am tired","I'm hustling","I need someone to shadow me","fatigue"],
-     "responses":["go back to the dept.!","Ok you can take your break","oh boy"],	
-     "context_set":""	
     }
 ]
-
 }
