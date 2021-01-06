@@ -1,8 +1,7 @@
-import json 
+import json
+from threading import Condition 
 import numpy as np
 from tensorflow import keras
-
-
 import colorama 
 colorama.init()
 from colorama import Fore, Style, Back
@@ -28,16 +27,17 @@ def chat():
 
     
     max_len = 20
-    
-    while True:
+    condition = True
+    while condition:
         #print(Fore.LIGHTBLUE_EX + "User: " + Style.RESET_ALL, end="")
         inp = input(Fore.LIGHTBLUE_EX + "User: " + Style.RESET_ALL)
         if inp.lower() == "quit":
-            break
+            condition = False
 
         result = model.predict(keras.preprocessing.sequence.pad_sequences(tokenizer.texts_to_sequences([inp]),
                                              truncating='post', maxlen=max_len))
         tag = lbl_encoder.inverse_transform([np.argmax(result)])
+        print(tag)
 
         for i in data['intents']:
             if i['tag'] == tag:
