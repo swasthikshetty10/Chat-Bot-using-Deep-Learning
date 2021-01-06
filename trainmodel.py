@@ -1,6 +1,6 @@
 import json 
 import numpy as np
- 
+
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.layers import Dense, Embedding, GlobalAveragePooling1D
@@ -28,7 +28,7 @@ for intent in data['intents']:
     
     if intent['tag'] not in labels:
         labels.append(intent['tag'])
-        
+   
 num_classes = len(labels)
 lbl_encoder = LabelEncoder()
 lbl_encoder.fit(training_labels)
@@ -52,7 +52,7 @@ model.add(Dense(16, activation='relu'))
 model.add(Dense(num_classes, activation='softmax'))
 
 model.compile(loss='sparse_categorical_crossentropy', 
-              optimizer='adam', metrics=['accuracy'])
+              optimizer='adam', metrics=['accuracy' ])
 
 model.summary()
 
