@@ -42,7 +42,6 @@ def chat():
         for i in data['intents']:
             if i['tag'] == tag:
                 print(Fore.GREEN + "ChatBot:" + Style.RESET_ALL , np.random.choice(i['responses']))
-
         
 
 print(Fore.YELLOW + "Start messaging with the bot (type quit to stop)!" + Style.RESET_ALL)
