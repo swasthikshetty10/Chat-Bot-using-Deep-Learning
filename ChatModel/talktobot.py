@@ -16,11 +16,11 @@ nltk.download('punkt')
 nltk.download('wordnet')
 lemmatizer = WordNetLemmatizer()
 
-
-model = load_model('bot.h5')
-intents = json.loads(open('intents.json').read())
-words = pickle.load(open('words.pkl', 'rb'))
-classes = pickle.load(open('classes.pkl', 'rb'))
+basedir = 'ChatModel'
+model = load_model(f'{basedir}/bot.h5')
+intents = json.loads(open(f'{basedir}/intents.json').read())
+words = pickle.load(open(f'{basedir}/words.pkl', 'rb'))
+classes = pickle.load(open(f'{basedir}/classes.pkl', 'rb'))
 
 
 def clean_up_sentence(sentence):
@@ -114,7 +114,7 @@ def takeCommand(cmd):
 
 
 # opening intents
-with open("intents.json") as file:
+with open(f"{basedir}/intents.json") as file:
     data = json.load(file)
 
 
@@ -137,9 +137,9 @@ def ChatBot(query):
     return Bot_Response
 
 
-os.system('cls')
-while True:
-    x = input('user : ')
-    if x.lower() in ['exit', 'quit', 'close']:
-        exit()
-    print('Bot : ' + ChatBot(takeCommand(x).lower())['response'])
+# os.system('cls')
+# while True:
+#     x = input('user : ')
+#     if x.lower() in ['exit', 'quit', 'close']:
+#         exit()
+#     print('Bot : ' + ChatBot(takeCommand(x).lower())['response'])
