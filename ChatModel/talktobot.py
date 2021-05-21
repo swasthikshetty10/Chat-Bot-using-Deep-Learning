@@ -114,8 +114,8 @@ def takeCommand(cmd):
 
 
 # opening intents
-with open(f"{basedir}/intents.json") as file:
-    data = json.load(file)
+
+data = intents
 
 
 def converttostring(list):
