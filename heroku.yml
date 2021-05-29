@@ -1,0 +1,3 @@
+build:
+  dicker:
+    web: Dockerfile
