@@ -17,8 +17,9 @@
         "Hello!",
         "Hello , Good to see you again!",
         "HI there, how can I help?",
-        "hello buddy",
-        "Hello my friend"
+        "hello buddy ,How con I help you",
+        "Hello my friend ,How can I help you",
+        ""
       ],
       "context_set": ""
     },
@@ -255,9 +256,9 @@
         "what is your good name"
       ],
       "responses": [
-        "I am EPAX",
-        "you can call me EPAX",
-        "I am your assistant EPAX"
+        "I am EPAX , swasthik's AI Bot",
+        "you can call me EPAX , I am swasthik's AI Bot",
+        "I am your assistant EPAX , How can I help you"
       ],
       "context_set": ""
     },

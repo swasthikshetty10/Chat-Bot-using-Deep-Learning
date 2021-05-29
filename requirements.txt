@@ -3,7 +3,8 @@ djangorestframework
 markdown
 django-filter
 pygments  
-numpy~=1.19.5
-keras~=2.4.3
-nltk~=3.6.2
-tensorflow
+numpy
+keras
+nltk
+python-dotenv
+psycopg2-binary

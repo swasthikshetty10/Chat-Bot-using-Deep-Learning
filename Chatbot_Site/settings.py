@@ -74,13 +74,27 @@ WSGI_APPLICATION = 'Chatbot_Site.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+from dotenv import dotenv_values
+dbconfig = dotenv_values(".env")
 DATABASES = {
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+
+        'ENGINE': dbconfig['ENGINE'],
+
+        'NAME':  dbconfig['NAME'],
+
+        'USER':  dbconfig['USER'],
+
+        'PASSWORD':  dbconfig['PASSWORD'],
+
+        'HOST': dbconfig['HOST'],
+
+        'PORT':  dbconfig['PORT'],
+
     }
 }
+
 
 
 # Password validation
