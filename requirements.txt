@@ -6,5 +6,6 @@ pygments
 numpy
 keras
 nltk
-python-dotenv
+django-environ
+gunicorn
 psycopg2-binary
